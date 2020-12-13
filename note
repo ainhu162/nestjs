@@ -1,0 +1,14 @@
+Nhận vào những param dạng object:
+ => Nên tạo 1 dto cho nó
+
+DTO
+ => Shape of params (request from users)
+ => Validate params
+
+Model
+ => Shape of data response (query from db)
+ 
+Entity
+ => Collection of a table in db
+
+Resi
