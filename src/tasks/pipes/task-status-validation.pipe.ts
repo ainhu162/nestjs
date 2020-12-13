@@ -1,0 +1,16 @@
+import { TaskStatus } from './../task.model';
+import { ArgumentMetadata, BadRequestException, PipeTransform } from "@nestjs/common";
+
+export class TaskStatusValidationPipe implements PipeTransform {
+
+  transform(value: any, metadata?: ArgumentMetadata) {
+    value = value.toUpperCase()
+    if(!this.isStatusValid(value)){
+      throw new BadRequestException(`${value} is invalid status`)
+    }
+  }
+
+  private isStatusValid(status: any) {
+    return !!TaskStatus[status]
+  }
+}
