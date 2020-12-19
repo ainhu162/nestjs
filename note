@@ -11,4 +11,9 @@ Model
 Entity
  => Collection of a table in db
 
-Resi
+Reposity
+ => handle db-interation related logic (database logic)
+ => keep service cleaner
+
+Service
+ => handle business logic
